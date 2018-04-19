@@ -32,5 +32,11 @@ body{
 .slider{
   margin-top: -121px;
   width: 100%;
-  background: url(../img/slider/macbook.png) no-repeat top center;
+  background: url(../img/) no-repeat top center;
+}
+.slider-container{
+  display: none;
+}
+.slider-active{
+  display: block;
 }
