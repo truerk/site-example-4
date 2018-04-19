@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">    
 <link href="style/style.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Pacifico&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
 <!--<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">     -->
 <!-- HTML5 Shim and Respond.js for IE8 support of HTML5 elements and media queries -->  
 <!-- Предупреждение: Respond.js не работает при просмотре страницы через файл:// -->  
@@ -24,21 +24,24 @@
                 <a href="index.html"><img src="img/top/logo.png" alt="logo.png"></a>
             </div>
             <div class="navigation">
-                <a href="#comics"><img src="img/top/comics.png" alt="comics.png"></a>
-                <a href="#movie"><img src="img/top/movies.png" alt="movies.png"></a>
-                <a href="#video"><img src="img/top/video.png" alt="video.png"></a>
-                <a href="#game"><img src="img/top/game.png" alt="game.png"></a>
-                <a href="#tv"><img src="img/top/tv.png" alt="tv.png"></a>
-                <a href="#more"><img src="img/top/more.png" alt="more.png"></a>
+                <a class="navfix-top" id="comics" href="#comics"><!--<img src="img/top/comics.png" alt="comics.png">--></a>
+                <a class="navfix-top" id="movie" href="#movie">
+                    <span class="movie-online"></span>
+                    <span class="movie-offline"></span>
+                </a>
+                <a id="video" href="#video"></a>
+                <a id="game" class="navfix-bottom" href="#game"></a>
+                <a id="tv" class="navfix-top" href="#tv"></a>
+                <a id="more" href="#more"></a>
             </div>
             <div class="user">
                 <div class="user-img">
                     <a href="#profile"><img src="img/top/user.png" alt="user.png"></a>
-                    <div class="user-online"></div>
-                    <div class="user-oаfline"></div>
+                    <div class="user-active"></div>
+                    <div class="user-offline"></div>
                 </div>
                 <div class="user-name"><label class="gothic-dark">Carol Danvers</label></div>                
-                <div class="edit-user"><a href="#edit_profile"><img src="img/top/edit_profile.png" alt="edit_profile.png"></a></div>
+                <div class="navfix-top" class="edit-user"><a id="edit_user" href="#edit_profile"></a></div>
             </div>
         </div>
     </div>
@@ -46,38 +49,58 @@
     <div class="header">
         <div class="header-container">
             <div class="dots-vertical">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
+                <span class="dot dot-active"><img src="img/header/slider_photo.png" alt=""><label class="gothic-white">James Gunn</label></span>
+                <span class="dot"><img src="img/header/slider_photo.png" alt=""><label class="gothic-white">James 2</label></span>
+                <span class="dot"><img src="img/header/slider_photo.png" alt=""><label class="gothic-white">James 3</label></span>
+                <span class="dot"><img src="img/header/slider_photo.png" alt=""><label class="gothic-white">James 4</label></span>
             </div>
             <div class="slider">
                 <div class="slider-container slider-active">
+                    <a href="?movies=guardians"><img class="img-slider" src="img/header/image.png" alt=""></a>
                     <div class="slider-bottom">
                         <div class="slider-info">
-                            <div class="slider-published"></div>
-                            <div class="slider-updated"></div>
-                            <div class="slider-rating"></div>
+                            <div class="slider-published"><label class="gothic-white">PUBLISHED</label><label class="calibri-red"> FEB 20, 2014</label></div>
+                            <div class="slider-updated"><label class="gothic-white">UPDATED</label><label class="calibri-red"> FEB 20, 2014</label></div>
+                            <div class="slider-rating">
+                                <label class="gothic-white">RATING</label>
+                                <div class="rating-container">
+                                    <a href=""><img src="img/global/star_red.png" alt=""></a>
+                                    <a href=""><img src="img/global/star_red.png" alt=""></a>
+                                    <a href=""><img src="img/global/star_red.png" alt=""></a>
+                                    <a href=""><img src="img/global/star_red.png" alt=""></a>
+                                    <a href=""><img src="img/global/star_white.png" alt=""></a>
+                                </div>
+                            </div>
                         </div>
                         <div class="slider-status">
-                            <div class="like"><img src="img/global/like.png" alt="like.png"><label class="gothic-white">2.548</label></div>
-                            <div class="comments"><img src="img/global/comments.png" alt="comments"><label class="gothic-white">21</label></div>
-                            <div class="downloads"><img src="img/global/downloads.png" alt="downloads.png"><label class="gothic-white">564</label></div>
+                            <div class="like"><a href=""><img src="img/global/like.png" alt="like.png"></a><label class="gothic-white">2.548</label></div>
+                            <div class="comments"><a href=""><img src="img/global/comments.png" alt="comments"></a><label class="gothic-white">21</label></div>
+                            <div class="downloads"><a href=""><img src="img/global/downloads.png" alt="downloads.png"></a><label class="gothic-white">564</label></div>
                         </div>
                     </div>
                 </div>
 
-                <div class="slider-container slider-active">
+                <div class="slider-container">
+                    <img class="img-slider" src="img/header/image.png" alt="">
                     <div class="slider-bottom">
                         <div class="slider-info">
-                            <div class="slider-published"></div>
-                            <div class="slider-updated"></div>
-                            <div class="slider-rating"></div>
+                            <div class="slider-published"><label class="gothic-white">PUBLISHED</label><label class="calibri-red"> FEB 20, 2014</label></div>
+                            <div class="slider-updated"><label class="gothic-white">UPDATED</label><label class="calibri-red"> FEB 20, 2014</label></div>
+                            <div class="slider-rating">
+                                <label class="gothic-white">RATING</label>
+                                <div class="rating-container">
+                                    <a href=""><img src="img/global/star_red.png" alt=""></a>
+                                    <a href=""><img src="img/global/star_red.png" alt=""></a>
+                                    <a href=""><img src="img/global/star_red.png" alt=""></a>
+                                    <a href=""><img src="img/global/star_red.png" alt=""></a>
+                                    <a href=""><img src="img/global/star_white.png" alt=""></a>
+                                </div>
+                            </div>
                         </div>
                         <div class="slider-status">
-                            <div class="like"><img src="img/global/like.png" alt="like.png"><label class="gothic-white">2.548</label></div>
-                            <div class="comments"><img src="img/global/comments.png" alt="comments"><label class="gothic-white">21</label></div>
-                            <div class="downloads"><img src="img/global/downloads.png" alt="downloads.png"><label class="gothic-white">564</label></div>
+                            <div class="like"><a href=""><img src="img/global/like.png" alt="like.png"></a><label class="gothic-white">2.548</label></div>
+                            <div class="comments"><a href=""><img src="img/global/comments.png" alt="comments"></a><label class="gothic-white">21</label></div>
+                            <div class="downloads"><a href=""><img src="img/global/downloads.png" alt="downloads.png"></a><label class="gothic-white">564</label></div>
                         </div>
                     </div>
                 </div>
@@ -213,10 +236,16 @@
         </div>
     </div>
 
-
-
-
-
+    <div class="bar">
+        <div class="bar-container">
+            <div class="bar-downloading"></div>
+            <div class="bar-actions">
+                <a href="#trash"><img src="img/bottom/trash.png" alt="trash.png"></a>
+                <a href="#refresh"><img src="img/bottom/refresh.png" alt="refresh.png"></a>
+                <a href="#cancel"><img src="img/bottom/close.png" alt="close.png"></a>
+            </div>
+        </div>
+    </div>
    
 
 

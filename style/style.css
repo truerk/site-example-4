@@ -3,33 +3,287 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Calibri', sans-serif;
   /*font-family: 'Pacifico', cursive;*/
 }
 body{
   /*background: linear-gradient(to bottom right, #49364A, #252D4D);*/
-  background-color: #fff;
+  background-color: #edeff0;
   color: #000;
   -webkit-font-smoothing: subpixel-antialiased !important;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility:    hidden;
   -ms-backface-visibility:     hidden;
 }
-
-.menu-social img:hover{
-  filter: grayscale(0.5);
+/* --- общие --- */
+.gothic-dark{
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  color: #3f444e;
 }
-.menu-close span:last-child{  
-  -webkit-transform: rotateZ(-45deg);
-  -moz-transform: rotateZ(-45deg);
+.gothic-white{
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  color: #fff;
+}
+.like img, .comments img, .downloads img{
+  margin-right: 10px;
+}
+.like , .comments, .downloads {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+/* --- верхняя панель --- */
+.panel{
+  width: 100%;
+  height: 75px;
+  background-color: #fff;  
+}
+.panel-container{
+  margin: 0 auto;
+  height: 100%;
+  max-width: 1194px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.panel-container img{
+  filter: grayscale(0);
+}
+.navigation{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 335px;
+}
+.navigation a{
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+}
+#comics{
+  background: url(../img/top/comics_gray.png) no-repeat center;
+}
+#movie{
+  background: url(../img/top/movies_gray.png) no-repeat center;
+}
+#movie{
+  position: relative;  
+}
+.movie-online{
+  position: relative;
+  top: -1px;
+  left: 5px;
+  width: 3px;
+  height: 3px;
+  border-radius: 1.5px;
+  background-color: #d8232a;
+  display: none;
+}
+.movie-offline{
+  position: relative;
+  top: -1px;
+  left: 5px;
+  width: 3px;
+  height: 3px;
+  border-radius: 1.5px;
+  background-color: #6E6E73;  
+}
+#video{
+  background: url(../img/top/video_gray.png) no-repeat center;
+}
+#game{
+  background: url(../img/top/game_gray.png) no-repeat center;
+}
+#tv{
+  background: url(../img/top/tv_gray.png) no-repeat center;
+}
+#more{
+  background: url(../img/top/more_gray.png) no-repeat center;
+}
+#comics:hover{
+  background: url(../img/top/comics.png) no-repeat center;
+}
+#movie:hover{
+  background: url(../img/top/movies.png) no-repeat center;
+}
+#video:hover{
+  background: url(../img/top/video.png) no-repeat center;
+}
+#game:hover{
+  background: url(../img/top/game.png) no-repeat center;
+}
+#tv:hover{
+  background: url(../img/top/tv.png) no-repeat center;
+}
+#more:hover{
+  background: url(../img/top/more.png) no-repeat center;
+}
+.navfix-top{
+  margin-top: 1px;
+}
+.navfix-bottom{
+ margin-bottom: 4px;
+}
+.user{
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.user-img{
+  position: relative;
+}
+.user-active{
   position: absolute;
-  top: 15px;
+  top: -2px;
+  right: -2px;
+  width: 9px;
+  height: 9px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  background-color: #d8232a;
+  display: none;
 }
-.scroll-hidden{
-  overflow-y: hidden;
+.user-offline{
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 9px;
+  height: 9px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  background-color: #6E6E73;
 }
+#edit_user{
+  background: url(../img/top/edit_profile_gray.png) no-repeat center;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+}
+#edit_user:hover{
+  background: url(../img/top/edit_profile.png) no-repeat center;
+}
+
+/* --- слайдер --- */
+.header{
+  width: 100%;
+  background-color: #130c04;
+}
+
+/* --- */
+.dots-vertical{
+  position: absolute;
+  bottom: 45%;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  padding: 0px 30px;
+}
+.dot{  
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+.dot img, .dot label{
+  display: none;
+}
+.dot-active{
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  width: 130px;
+  height: 30px;
+  margin-left: -8px;
+}
+.dot-active img{
+  display: block;
+  margin-right: 10px;
+}
+.dot-active label{
+  display: block;
+}
+.dots-vertical span:not(:last-child){
+  margin-bottom: 10px;
+}
+/* --- */
+
+.header-container{
+  position: relative;
+  margin: 0 auto;
+  max-width: 1194px;
+}
+.slider-container{
+  position: relative;
+  display: none;
+  flex-direction: column;
+}
+.slider-active{
+  display: flex;
+}
+.slider-container .img-slider{
+  max-width: 100%;
+  height: auto;
+}
+.slider-bottom{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 50px;
+  background-color: rgba(7, 7, 7, 0.35);
+  border-top: 1px solid #373737;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 30px;
+  flex-wrap: wrap;
+}
+.slider-info{
+  width: 520px;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;  
+}
+.slider-info .gothic-white{
+  font-size: 14px;
+}
+.slider-rating{
+  display: flex;
+  width: 150px;
+  align-items: center;
+  justify-content: space-between;  
+}
+.calibri-red{
+  font-size: 16px;
+  color: #d8232a;
+}
+.slider-status{
+  display: flex;
+  width: 220px;
+  justify-content: space-between;
+  align-items: center;
+}
+.slider-rating label{
+  margin-right: 10px;
+}
+.rating-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+
+
+
+
 /* --- slider --- */
-.slider{
+/*.slider{
   margin-top: -121px;
   width: 100%;
   background: url(../img/) no-repeat top center;
@@ -39,4 +293,21 @@ body{
 }
 .slider-active{
   display: block;
+}*/
+
+
+/*.menu-social img:hover{
+  filter: grayscale(0.5);
 }
+.navigation a:not(:last-child){
+  margin-right: 40px;
+}
+.menu-close span:last-child{  
+  -webkit-transform: rotateZ(-45deg);
+  -moz-transform: rotateZ(-45deg);
+  position: absolute;
+  top: 15px;
+}
+.scroll-hidden{
+  overflow-y: hidden;
+}*/
