@@ -1,0 +1,36 @@
+/* --- Основные настройки --- */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  /*font-family: 'Pacifico', cursive;*/
+}
+body{
+  /*background: linear-gradient(to bottom right, #49364A, #252D4D);*/
+  background-color: #fff;
+  color: #000;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility:    hidden;
+  -ms-backface-visibility:     hidden;
+}
+
+.menu-social img:hover{
+  filter: grayscale(0.5);
+}
+.menu-close span:last-child{  
+  -webkit-transform: rotateZ(-45deg);
+  -moz-transform: rotateZ(-45deg);
+  position: absolute;
+  top: 15px;
+}
+.scroll-hidden{
+  overflow-y: hidden;
+}
+/* --- slider --- */
+.slider{
+  margin-top: -121px;
+  width: 100%;
+  background: url(../img/slider/macbook.png) no-repeat top center;
+}
