@@ -1,47 +1,31 @@
 document.addEventListener('DOMContentLoaded',function(){
-  //var btn_view = document.getElementsByClassName('movies-info');
-  var btn_view = document.getElementsByClassName('movies');
-
-
+  var movie_info_open = document.getElementsByClassName('movies');
+  var detail_all = document.getElementsByClassName('movies-detail');  
 
   var open_detail = function(){
-    //var parent = this.parentNode.parentNode.id;
     var parent = this.parentNode.id;
     var elem = document.getElementById(parent);    
-    var detail = elem.getElementsByClassName('movies-detail');
-    detail[0].classList.add("active-detail");    
-    //this.addEventListener('click', close_detail);  
-   // event.stopPropagation();
+    var detail = elem.getElementsByClassName('movies-detail');    
+    for (var i = 0; i < detail_all.length; i++) {
+      detail_all[i].classList.remove("active-detail");
+    }    
+    detail[0].classList.add("active-detail");
+    close_detail(parent);    
   };
 
-  /*var close_detail = function(){
-    var parent = document.getElementById(this.parentNode.id);
-    //var detail = parent.getElementsByClassName('movies-detail');
-    //detail[0].classList.remove("active-detail");
-    var active = parent.getElementsByClassName('active-detail');
-    active[0].classList.remove('active-detail');
+  var close_detail = function(par){
+    var parent_id = par;
+    var parent = document.getElementById(parent_id);
+    var detail = parent.getElementsByClassName('movies-detail');    
+    detail[0].onclick = function(){
+      this.classList.remove("active-detail");
+    }
   }
-*/
-for (var i = 0; i < btn_view.length; i++) {
-    btn_view[i].addEventListener('click', open_detail);
-}
-});
-  
 
-/*document.addEventListener('DOMContentLoaded',function(){
-  var btn_view = document.getElementsByClassName('downloads');
-  btn_view.addEventListener('click', a(), false);  
-});*/
+  for (var i = 0; i < movie_info_open.length; i++) {
+      movie_info_open[i].addEventListener('click', open_detail);
+  }
+  
+});
 //btn.addEventListener('click', function(){changeBgImg();ещё();ещё();....});
 //block.style.backgroundImage = "url('img/img2.jpg')" 
-/*
-
-var block = document.getElementById('block');
-
-function changeBgImg(){
-    block.style.backgroundImage = "url('https://cs7062.vk.me/c540107/v540107359/2729/fYQlS_23QdA.jpg')";
-}
-
-changeBgImg();
-*/
-//var btn_view = document.getElementsById('iron');
