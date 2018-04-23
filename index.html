@@ -113,14 +113,18 @@
     <div class="content">
         <div class="content-container">
             <div class="content-title">
-                <div class="page-name">FEATURED MOVIES</div>
+                <div class="page-name gothic-dark">FEATURED MOVIES</div>
                 <div class="content-tabs">
-                    <div class="new">New Realised</div>
-                    <div class="trailers">Trailers & Clips</div>
-                    <div class="search">
-                        <input type="text" placeholder="Search...">
+                    <div class="new active-tabs"><a href="?new">New Realised</a></div>
+                    <div class="slesh-tab"></div>
+                    <div class="trailers"><a href="?trailers">Trailers & Clips</a></div>                    
+                </div>
+                <div class="search">
+                    <form action="">
+                        <input id="search_text" name="search_text" type="text" placeholder="Search...">
                         <!-- Попробуем через after добавить иконку -->
-                    </div>
+                        <button id="search_button"><img src="img/global/search.png" alt="search"></button>
+                    </form>
                 </div>
             </div>
 

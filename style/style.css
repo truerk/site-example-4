@@ -6,6 +6,9 @@
   font-family: 'Calibri', sans-serif;  
   /*font-family: 'Pacifico', cursive;*/
 }
+a{
+  text-decoration: none;
+}
 body{
   /*background: linear-gradient(to bottom right, #49364A, #252D4D);*/
   background-color: #edeff0;
@@ -289,7 +292,75 @@ body{
 }
 
 /* --- контент --- */
-
+.content{
+  width: 100%;
+}
+.content-container{
+  padding: 0px 30px;
+  margin: 0 auto;
+  max-width: 1194px;
+  display: flex;
+  flex-direction: column;
+}
+.content-title{
+  padding: 30px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page-name{
+  font-size: 17px;
+}
+.content-tabs a{
+  color: #989ca4;
+  font-size: 18px;
+  font-style: italic;
+}
+.content-tabs{
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.active-tabs a{
+  color: #3f444e;
+}
+.slesh-tab{
+  width: 1px;
+  height: 20px;
+  background-color: #989ca4;
+  transform: rotate(30deg);
+}
+.search{
+  min-width: 200px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.search input{
+  width: 170px;
+  font-size: 13px;
+  color: #9b9ea3;
+  font-style: italic;
+  padding: 0px 0px 3px 3px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  border-bottom: 1px solid #cacdd0;
+}
+.search button{
+  width: 20px;
+  height: 20px;  
+  border: none;
+  background-color: transparent;
+  /*background-color: #edeff0;*/
+  cursor: pointer;
+  position: relative;
+  left: -4px;
+  top: 2px;
+  padding: 0px 0px 5px 0px;
+  border-bottom: 1px solid #cacdd0;
+  outline: none;  
+}
 
 
 
