@@ -51,6 +51,7 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 .panel-container img{
   filter: grayscale(0);
@@ -66,6 +67,29 @@ body{
   height: 25px;
   display: flex;
   align-items: center;
+  position: relative;
+}
+.navigation a:hover .tooltip-menu{
+  display: block;
+}
+.tooltip-menu{
+  top: 35px;
+  position: absolute;
+  z-index: 1;
+  left: -25px;
+  background-color: #d8232a;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 13px;
+  display: none;
+}
+.tooltip-menu::after{
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  border: 5px solid transparent;
+  border-bottom: 5px solid #d8232a;
 }
 #comics{
   background: url(../img/top/comics_gray.png) no-repeat center;
@@ -307,6 +331,7 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 .page-name{
   font-size: 17px;
