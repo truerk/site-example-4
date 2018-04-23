@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Calibri', sans-serif;
+  font-family: 'Calibri', sans-serif;  
   /*font-family: 'Pacifico', cursive;*/
 }
 body{
@@ -41,6 +41,7 @@ body{
   background-color: #fff;  
 }
 .panel-container{
+  padding: 0px 30px;
   margin: 0 auto;
   height: 100%;
   max-width: 1194px;
@@ -170,6 +171,7 @@ body{
 
 /* --- слайдер --- */
 .header{
+  position: relative;
   width: 100%;
   background-color: #130c04;
 }
@@ -226,17 +228,27 @@ body{
 .slider-active{
   display: flex;
 }
-.slider-container .img-slider{
+.img-slider{
   max-width: 100%;
-  height: auto;
 }
 .slider-bottom{
   position: absolute;
+  display: none;
   bottom: 0;
   width: 100%;
-  min-height: 50px;
+  min-height: 50px;  
+  border-top: 1px solid rgba(55, 55, 55, 0.35);  
   background-color: rgba(7, 7, 7, 0.35);
-  border-top: 1px solid #373737;
+}
+.slider-bottom-active{
+  display: block;
+}
+.slider-bottom-container{
+  /*position: absolute;
+  bottom: 0;*/
+  margin: 0 auto;
+  max-width: 1194px;
+  min-height: 50px;
   display: flex;
   justify-content: space-between;
   padding: 0px 30px;
@@ -275,6 +287,9 @@ body{
   display: flex;
   justify-content: space-around;
 }
+
+/* --- контент --- */
+
 
 
 
