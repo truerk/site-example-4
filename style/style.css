@@ -485,6 +485,124 @@ body{
   border-top-right-radius: 5px;
 }
 
+/* --- мобилка --- */
+.burger-button{
+  display: none;
+}
+.mobile-menu{
+  display: none;
+}
+#burger_button{
+  display: none;
+}
+#burger_button_close{
+  display: none;
+}
+
+/* --- адаптивность --- */
+
+@media screen and (min-width: 700px){
+    
+}
+
+@media screen and (max-width: 700px){
+  /* --- верхняя панель --- */
+  .navigation{
+    display: none;
+  }
+  .panel{
+    position: fixed;
+    top: 0;
+    z-index: 2;
+  }
+  .panel-container{
+    flex-wrap: nowrap;
+  }
+  .user{
+    display: none;
+  }
+  #burger_button{
+    display: flex;
+  }
+  .burger-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 15px;
+    cursor: pointer;
+  }
+  .burger-button span{
+    border-radius: 10px;
+    width: 20px;
+    height: 2px;
+    background-color: #3f444e;
+  }
+  .mobile-menu{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    background-color: #fff;
+    width: 100%;
+    min-height: 100px;
+    padding: 15px;    
+  }
+  .mobile-menu a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: right !important;
+    width: 100%;
+    height: 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    color: #3f444e;
+    padding: 20px;
+    border-bottom: 2px solid transparent;
+  }
+  .mobile-menu a:hover{
+    border-bottom: 2px solid #3f444e;
+  }
+  /* --- слайдер --- */
+  .header{
+    display: none;
+  }
+  /* --- контент --- */
+  .content{
+    margin-top: 75px;
+  }
+  .content-title{
+    flex-direction: column;
+  }
+  .content-title div{
+    padding: 5px 0px;
+  }
+  .container-movies {
+    justify-content: center;
+    padding: 0;
+  }
+
+
+
+}
+
+@media screen and (max-width: 428px){    
+  /* --- контент --- */
+  .content-tabs{
+    flex-direction: column;
+  }
+  .slesh-tab{
+    display: none;
+  }
+  .page-name{
+    text-align: center;
+  }
+  .search{
+    width: 100%;
+    justify-content: center;
+  }
+}
 
 
 
